@@ -48,6 +48,13 @@ Command Line
 
 
 
+Alternatives Node.js Packages:
+------------------------------
+- [json2csv](https://github.com/zeMirco/json2csv)
+- [jsoncsv](https://github.com/gradus/jsoncsv)
+
+
+
 License
 -------
 
