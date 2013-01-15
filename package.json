@@ -1,0 +1,35 @@
+{
+  "name": "jsontocsv",
+  "version": "0.0.1",
+  "description": "Convert lines of JSON data to CSV",
+  "homepage": [
+    ""
+  ],
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": ["json", "csv", "parse", "convert", "text", "line", "lines"],
+  "author": "JP Richardson <jprichardson@gmail.com>",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "git@github.com:jprichardson/node-jsontocsv.git"
+    }
+  ],
+  "dependencies": {
+    "commander": "~1.1.1",
+    "byline": "~2.0.3",
+    "path-extra": "0.0.3",
+    "nextflow": "~0.3.0"
+  },
+  "devDependencies": {
+    "testutil": "~0.3.0",
+    "mocha": "*",
+    "string": "~1.1.0"
+  },
+  "main": "./lib/jsontocsv.js",
+  "scripts": {
+    "test": "mocha test"
+  }
+}
