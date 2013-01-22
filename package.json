@@ -1,6 +1,6 @@
 {
   "name": "jsontocsv",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Convert lines of JSON data to CSV",
   "homepage": [
     ""
@@ -31,5 +31,8 @@
   "main": "./lib/jsontocsv.js",
   "scripts": {
     "test": "mocha test"
+  },
+  "bin": {
+    "jsontocsv": "./bin/jsontocsv"
   }
 }
