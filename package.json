@@ -7,14 +7,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git@github.com:jprichardson/node-jsontocsv.git"
   },
   "keywords": ["json", "csv", "parse", "convert", "text", "line", "lines"],
   "author": "JP Richardson <jprichardson@gmail.com>",
   "licenses": [
     {
       "type": "MIT",
-      "url": "git@github.com:jprichardson/node-jsontocsv.git"
+      "url": ""
     }
   ],
   "dependencies": {
