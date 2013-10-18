@@ -1,6 +1,6 @@
 {
   "name": "jsontocsv",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Convert lines of JSON data to CSV",
   "repository": {
     "type": "git",

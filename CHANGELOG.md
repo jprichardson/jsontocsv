@@ -1,3 +1,8 @@
+0.1.0 / 2013-10-18
+------------------
+* changed Github repo
+* upgraded deps for Node v0.10.x support
+
 0.0.2 / 2013-01-15
 ------------------
 * Fixed `jsontocsv` bin available bug.
