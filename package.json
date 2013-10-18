@@ -4,9 +4,17 @@
   "description": "Convert lines of JSON data to CSV",
   "repository": {
     "type": "git",
-    "url": "git@github.com:jprichardson/node-jsontocsv.git"
+    "url": "git@github.com:jprichardson/jsontocsv.git"
   },
-  "keywords": ["json", "csv", "parse", "convert", "text", "line", "lines"],
+  "keywords": [
+    "json",
+    "csv",
+    "parse",
+    "convert",
+    "text",
+    "line",
+    "lines"
+  ],
   "author": "JP Richardson <jprichardson@gmail.com>",
   "licenses": [
     {
@@ -15,8 +23,8 @@
     }
   ],
   "dependencies": {
-    "commander": "~1.1.1",
-    "byline": "~2.0.3",
+    "commander": "~2.0.0",
+    "byline": "~3.1.2",
     "path-extra": "0.0.3",
     "nextflow": "~0.3.0"
   },
