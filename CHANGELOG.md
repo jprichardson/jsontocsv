@@ -1,3 +1,7 @@
+0.1.1 / 2013-11-18
+------------------
+* fixed bug when a blacklist was invoked
+
 0.1.0 / 2013-10-18
 ------------------
 * changed Github repo
