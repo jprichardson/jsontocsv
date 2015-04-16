@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
 var program = require('commander')
-  , jsontocsv = require('../lib/jsontocsv')
-  , fs = require('fs')
+var jsontocsv = require('../lib/jsontocsv')
+var fs = require('fs')
 
 program
   .version(require('../package').version)
@@ -14,10 +14,10 @@ program
   .parse(process.argv)
 
 var inputStream = null
-  , outputStream = null
-  , whitelist = null
-  , blacklist = null
-  , header = true
+var outputStream = null
+var whitelist = null
+var blacklist = null
+var header = true
 
 if (program.input)
   inputStream = fs.createReadStream(program.input)

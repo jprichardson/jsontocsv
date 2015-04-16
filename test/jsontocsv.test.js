@@ -1,8 +1,8 @@
 var jsontocsv = require('../lib/jsontocsv')
-  , testutil = require('testutil')
-  , path = require('path')
-  , fs = require('fs')
-  , S = require('string')
+var testutil = require('testutil')
+var path = require('path')
+var fs = require('fs')
+var S = require('string')
 
 var TEST_DIR = ''
 
@@ -14,7 +14,7 @@ function ARR_EQ (arr1, arr2) {
 
 describe('jsontocsv', function() {
   var OUTS = ''
-    , OUT_FILE = ''
+  var OUT_FILE = ''
 
   beforeEach(function(done) {
     TEST_DIR = testutil.createTestDir('jsontocsv')
