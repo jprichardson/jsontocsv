@@ -29,10 +29,11 @@
     "nextflow": "~0.3.0"
   },
   "devDependencies": {
+    "fs-extra": "^0.18.1",
     "mocha": "*",
     "standard": "^3.6.1",
     "string": "~1.1.0",
-    "testutil": "~0.3.0"
+    "terst": "^0.3.0"
   },
   "main": "./lib/jsontocsv.js",
   "scripts": {

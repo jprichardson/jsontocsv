@@ -1,13 +1,12 @@
 var jsontocsv = require('../lib/jsontocsv')
-var testutil = require('testutil')
 var path = require('path')
-var fs = require('fs')
+var os = require('os')
+var fs = require('fs-extra')
 var S = require('string')
+require('terst')
 
 /* global beforeEach, describe, it, F, T */
 /* eslint-disable no-spaced-func */
-
-var TEST_DIR = ''
 
 function ARR_EQ (arr1, arr2) {
   T (arr1.length === arr2.length)
@@ -17,11 +16,12 @@ function ARR_EQ (arr1, arr2) {
 }
 
 describe('jsontocsv', function () {
-  var OUTS = ''
-  var OUT_FILE = ''
+  var TEST_DIR, OUTS, OUT_FILE
 
   beforeEach(function (done) {
-    TEST_DIR = testutil.createTestDir('jsontocsv')
+    TEST_DIR = path.join(os.tmpdir(), 'jsontocsv')
+    fs.emptyDirSync(TEST_DIR)
+
     OUT_FILE = path.join(TEST_DIR, 'output.csv')
     OUTS = fs.createWriteStream(OUT_FILE, {encoding: 'utf8'})
     done()
