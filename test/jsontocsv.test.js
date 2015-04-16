@@ -33,12 +33,13 @@ describe('jsontocsv', function () {
       jsontocsv(IN_STREAM, OUT_STREAM, function (err) {
         F (err)
         var data = fs.readFileSync(OUT_FILE, 'utf8').trim().split('\n')
-        EQ (data.length, 4)
+        EQ (data.length, 5)
 
-        ARR_EQ (S(data[0]).parseCSV(), ['url', 'first', 'last', 'state'])
-        ARR_EQ (S(data[1]).parseCSV(), ['http://google.com', 'jp', 'richardson', ''])
-        ARR_EQ (S(data[2]).parseCSV(), ['http://bing.com', 'bill', 'gates', 'washington'])
-        ARR_EQ (S(data[3]).parseCSV(), ['', 'michael', 'dell', ''])
+        ARR_EQ (S(data[0]).parseCSV(), ['url', 'first', 'last', 'state', 'alive'])
+        ARR_EQ (S(data[1]).parseCSV(), ['http://google.com', 'jp', 'richardson', '', ''])
+        ARR_EQ (S(data[2]).parseCSV(), ['http://bing.com', 'bill', 'gates', 'washington', ''])
+        ARR_EQ (S(data[3]).parseCSV(), ['', 'michael', 'dell', '', ''])
+        ARR_EQ (S(data[4]).parseCSV(), ['http://apple.com', 'steve', 'jobs', 'california', 'false'])
 
         done()
       })
@@ -54,12 +55,13 @@ describe('jsontocsv', function () {
       jsontocsv(IN_STREAM, OUT_STREAM, opts, function (err) {
         F (err)
         var data = fs.readFileSync(OUT_FILE, 'utf8').trim().split('\n')
-        EQ (data.length, 4)
+        EQ (data.length, 5)
 
-        ARR_EQ (S(data[0]).parseCSV(), ['first', 'last'])
-        ARR_EQ (S(data[1]).parseCSV(), ['jp', 'richardson'])
-        ARR_EQ (S(data[2]).parseCSV(), ['bill', 'gates'])
-        ARR_EQ (S(data[3]).parseCSV(), ['michael', 'dell'])
+        ARR_EQ (S(data[0]).parseCSV(), ['first', 'last', 'alive'])
+        ARR_EQ (S(data[1]).parseCSV(), ['jp', 'richardson', ''])
+        ARR_EQ (S(data[2]).parseCSV(), ['bill', 'gates', ''])
+        ARR_EQ (S(data[3]).parseCSV(), ['michael', 'dell', ''])
+        ARR_EQ (S(data[4]).parseCSV(), ['steve', 'jobs', 'false'])
 
         done()
       })
@@ -76,11 +78,12 @@ describe('jsontocsv', function () {
       jsontocsv(IN_STREAM, OUT_STREAM, opts, function (err) {
         F (err)
         var data = fs.readFileSync(OUT_FILE, 'utf8').trim().split('\n')
-        EQ (data.length, 3)
+        EQ (data.length, 4)
 
-        ARR_EQ (S(data[0]).parseCSV(), ['jp', 'richardson'])
-        ARR_EQ (S(data[1]).parseCSV(), ['bill', 'gates'])
-        ARR_EQ (S(data[2]).parseCSV(), ['michael', 'dell'])
+        ARR_EQ (S(data[0]).parseCSV(), ['jp', 'richardson', ''])
+        ARR_EQ (S(data[1]).parseCSV(), ['bill', 'gates', ''])
+        ARR_EQ (S(data[2]).parseCSV(), ['michael', 'dell', ''])
+        ARR_EQ (S(data[3]).parseCSV(), ['steve', 'jobs', 'false'])
 
         done()
       })
@@ -96,12 +99,13 @@ describe('jsontocsv', function () {
       jsontocsv(IN_STREAM, OUT_STREAM, opts, function (err) {
         F (err)
         var data = fs.readFileSync(OUT_FILE, 'utf8').trim().split('\n')
-        EQ (data.length, 4)
+        EQ (data.length, 5)
 
         ARR_EQ (S(data[0]).parseCSV(), ['first', 'last'])
         ARR_EQ (S(data[1]).parseCSV(), ['jp', 'richardson'])
         ARR_EQ (S(data[2]).parseCSV(), ['bill', 'gates'])
         ARR_EQ (S(data[3]).parseCSV(), ['michael', 'dell'])
+        ARR_EQ (S(data[4]).parseCSV(), ['steve', 'jobs'])
 
         done()
       })
@@ -118,11 +122,12 @@ describe('jsontocsv', function () {
       jsontocsv(IN_STREAM, OUT_STREAM, opts, function (err) {
         F (err)
         var data = fs.readFileSync(OUT_FILE, 'utf8').trim().split('\n')
-        EQ (data.length, 3)
+        EQ (data.length, 4)
 
         ARR_EQ (S(data[0]).parseCSV(), ['jp', 'richardson'])
         ARR_EQ (S(data[1]).parseCSV(), ['bill', 'gates'])
         ARR_EQ (S(data[2]).parseCSV(), ['michael', 'dell'])
+        ARR_EQ (S(data[3]).parseCSV(), ['steve', 'jobs'])
 
         done()
       })
