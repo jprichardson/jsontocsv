@@ -25,8 +25,7 @@
   "dependencies": {
     "byline": "^4.2.1",
     "commander": "~2.0.0",
-    "nextflow": "~0.3.0",
-    "path-extra": "0.0.3"
+    "nextflow": "~0.3.0"
   },
   "devDependencies": {
     "fs-extra": "^0.18.1",
