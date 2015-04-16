@@ -1,3 +1,10 @@
+0.2.0 / 2015-04-16
+------------------
+- upgraded to JavaScript Standard Style
+- upgraded `byline` to 4.x
+- removed `path-extra`
+- bugfix: if json field was falsey, didn't get output to CSV
+
 0.1.1 / 2013-11-18
 ------------------
 * fixed bug when a blacklist was invoked
