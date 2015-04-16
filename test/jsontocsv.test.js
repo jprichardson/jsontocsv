@@ -29,7 +29,7 @@ describe('jsontocsv', function () {
 
   describe('> when no options', function () {
     it('should create output file with all fields', function (done) {
-      jsontocsv(fs.createReadStream('./test/resources/data.txt'), OUTS, function (err) {
+      jsontocsv(fs.createReadStream('./test/fixtures/data.txt'), OUTS, function (err) {
         F (err)
         var data = fs.readFileSync(OUT_FILE, 'utf8').trim().split('\n')
         T (data.length === 4)
@@ -46,7 +46,7 @@ describe('jsontocsv', function () {
 
   describe('> when blacklist is an option', function () {
     it('should create output file without blacklisted fields', function (done) {
-      jsontocsv(fs.createReadStream('./test/resources/data.txt'), OUTS, {blacklist: ['url', 'state']}, function (err) {
+      jsontocsv(fs.createReadStream('./test/fixtures/data.txt'), OUTS, {blacklist: ['url', 'state']}, function (err) {
         F (err)
         var data = fs.readFileSync(OUT_FILE, 'utf8').trim().split('\n')
         T (data.length === 4)
@@ -63,7 +63,7 @@ describe('jsontocsv', function () {
 
   describe('> when blacklist is an option and header is false', function () {
     it('should create output file without blacklisted fields without the header', function (done) {
-      jsontocsv(fs.createReadStream('./test/resources/data.txt'), OUTS, {header: false, blacklist: ['url', 'state']}, function (err) {
+      jsontocsv(fs.createReadStream('./test/fixtures/data.txt'), OUTS, {header: false, blacklist: ['url', 'state']}, function (err) {
         F (err)
         var data = fs.readFileSync(OUT_FILE, 'utf8').trim().split('\n')
         T (data.length === 3)
@@ -79,7 +79,7 @@ describe('jsontocsv', function () {
 
   describe('> when whitelist is an option', function () {
     it('should create output file with only whitelisted fields', function (done) {
-      jsontocsv(fs.createReadStream('./test/resources/data.txt'), OUTS, {whitelist: ['first', 'last']}, function (err) {
+      jsontocsv(fs.createReadStream('./test/fixtures/data.txt'), OUTS, {whitelist: ['first', 'last']}, function (err) {
         F (err)
         var data = fs.readFileSync(OUT_FILE, 'utf8').trim().split('\n')
         T (data.length === 4)
@@ -96,7 +96,7 @@ describe('jsontocsv', function () {
 
   describe('> when whitelist and header is false', function () {
     it('should create output file with only whitelisted fields and no header', function (done) {
-      jsontocsv(fs.createReadStream('./test/resources/data.txt'), OUTS, {header: false, whitelist: ['first', 'last']}, function (err) {
+      jsontocsv(fs.createReadStream('./test/fixtures/data.txt'), OUTS, {header: false, whitelist: ['first', 'last']}, function (err) {
         F (err)
         var data = fs.readFileSync(OUT_FILE, 'utf8').trim().split('\n')
         T (data.length === 3)
