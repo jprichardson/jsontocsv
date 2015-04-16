@@ -29,13 +29,14 @@
     "nextflow": "~0.3.0"
   },
   "devDependencies": {
-    "testutil": "~0.3.0",
     "mocha": "*",
-    "string": "~1.1.0"
+    "standard": "^3.6.1",
+    "string": "~1.1.0",
+    "testutil": "~0.3.0"
   },
   "main": "./lib/jsontocsv.js",
   "scripts": {
-    "test": "mocha test"
+    "test": "standard && mocha test"
   },
   "bin": {
     "jsontocsv": "./bin/jsontocsv"

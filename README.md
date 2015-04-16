@@ -47,6 +47,12 @@ Command Line
         -h, --header [true/false]  If set to the true, the CSV header will be output. Defaults to true.
 
 
+Hacking on `jsontocsv`
+----------------------
+
+[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+
+
 
 Alternatives Node.js Packages:
 ------------------------------
