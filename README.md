@@ -24,12 +24,13 @@ Programmatically
 ```javascript
 var jsontocsv = require('jsontocsv')
 
-jsontocsv(inputStream, outputStream, {header: false, whitelist: whitelistFields}, function (err) {
+jsontocsv(inputStream, outputStream, {header: false, whitelist: whitelistFields, separator: ','}, function (err) {
   if (!err) console.log('Success.')
 });
+
 ```
 
-
+The separator is ',' as default.
 
 Command Line
 ------------
