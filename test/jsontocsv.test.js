@@ -112,6 +112,31 @@ describe('jsontocsv', function () {
     })
   })
 
+  describe('> when separator is an option', function () {
+    it('should create output file with CSV separator defined', function (done) {
+      var opts = {
+        whitelist: ['first', 'last'],
+        separator: ';'
+      }
+
+      jsontocsv(IN_STREAM, OUT_STREAM, opts, function (err) {
+        F (err)
+        var data = fs.readFileSync(OUT_FILE, 'utf8').trim()
+        EQ (/^("?\w+"?;)+"?\w+"?$/mgi.test(data), true)
+        data = data.split('\n')
+        EQ (data.length, 5)
+
+        ARR_EQ (S(data[0]).parseCSV(';'), ['first', 'last'])
+        ARR_EQ (S(data[1]).parseCSV(';'), ['jp', 'richardson'])
+        ARR_EQ (S(data[2]).parseCSV(';'), ['bill', 'gates'])
+        ARR_EQ (S(data[3]).parseCSV(';'), ['michael', 'dell'])
+        ARR_EQ (S(data[4]).parseCSV(';'), ['steve', 'jobs'])
+
+        done()
+      })
+    })
+  })
+
   describe('> when whitelist and header is false', function () {
     it('should create output file with only whitelisted fields and no header', function (done) {
       var opts = {
