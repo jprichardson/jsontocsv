@@ -1,3 +1,7 @@
+0.3.0 / 2016-01-06
+------------------
+- add separator. See: https://github.com/jprichardson/jsontocsv/pull/3
+
 0.2.0 / 2015-04-16
 ------------------
 - upgraded to JavaScript Standard Style
